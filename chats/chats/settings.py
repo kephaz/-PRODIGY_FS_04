@@ -21,11 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-s*ot=pe^ndb+^z4z^&q+b))cqtqb7iv=b=&5*klz@vo&@=6-=y'
+# SECRET_KEY = 'django-insecure-@wlq#)#(sz&iy863axo%f^6qy^8_!onz%lt_d_1b3e1g=02#+('
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["chatty-mkzf.onrender.com", "127.0.0.1", "localhost"]
 
 
 # Application definition
@@ -60,7 +61,7 @@ ROOT_URLCONF = 'chats.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,8 +123,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / "asset"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+
+MEDIA_URL = 'img/'
+MEDIA_ROOT = BASE_DIR/'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+AUTH_USER_MODEL = 'core.CustomUser'
