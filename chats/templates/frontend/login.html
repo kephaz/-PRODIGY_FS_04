@@ -1,0 +1,35 @@
+{% extends "base.html" %} 
+    
+{% block content %}
+    <link rel="stylesheet" href="index.css" />
+
+    <style>
+      input{
+          margin-bottom: 20px;
+      }
+  </style>
+
+  </head>
+  <body>
+    <div class="chatContainer">
+     
+    
+    <div class="registerFormContaier">
+    
+        <div class="registerForm">
+            <h1>Chatty</h1>
+            <p>You are welcome, login</p>
+            <form action="" method="POST">
+              
+                <input type="text" name="username" placeholder="Enter Username">
+                <input type="password" name="password" placeholder="Enter Password">
+                <button>Login</button>
+                <span><a href="">Register</a> if you don't have an account.</span>
+            </form>
+        </div>
+    
+     
+    </div>
+     
+    </div>
+    {% endblock %}

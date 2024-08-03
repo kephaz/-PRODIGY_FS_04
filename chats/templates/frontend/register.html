@@ -1,0 +1,34 @@
+{% extends "base.html" %} {% block content %}
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="chatContainer">
+      <div class="registerFormContaier">
+
+        <div class="registerForm">
+            <a href=""><h1>Chatty</h1></a>
+            <p>Sign up to get started.</p>
+            <form action="" method='POST'>
+               
+                    
+                <input type="text" name="Username" placeholder="Enter Username">
+                <small></small>
+                <input type="text" name="Firstname" placeholder="Enter Firstname">
+                <small></small>
+                <input type="text" name="Lastname" placeholder="Enter Lastname">
+                <small></small>
+                <input type="password" name="Password" placeholder="Enter Password">
+                <small></small>
+                <input type="password" name="Password" placeholder="Confirm Password">
+                <small></small>
+                <button>Register</button>
+                <span><a href="{% url 'signin' %}">Login</a> if you have an account.</span>
+            </form>
+        </div>
+    
+     
+    </div>
+     
+    </div>
+  </body>
+</html>
